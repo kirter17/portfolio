@@ -298,8 +298,75 @@
             }
             .c-btn.secondary:hover { background: #f8f8f8; opacity: 1; }
 
+            /* hero buttons */
+            .c-hero-right {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 1rem;
+                flex-shrink: 0;
+            }
+            .c-btn.hero-primary {
+                background: #fff;
+                color: #181a1f;
+            }
+            .c-btn.hero-secondary {
+                background: rgba(255,255,255,.15);
+                color: #fff;
+                border: 1px solid rgba(255,255,255,.3);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+            }
+            .c-btn.hero-secondary:hover { background: rgba(255,255,255,.25); opacity: 1; }
+
+            /* jtbd */
+            .c-jtbd {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1px;
+                background: #1b1f3b1a;
+                border: 1px solid #1b1f3b1a;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-top: 2rem;
+            }
+            .c-jtbd-item {
+                background: #fff;
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+            }
+            .c-jtbd-item.hot { background: #f8f8f8; }
+            .c-jtbd-priority {
+                font-family: Roboto, sans-serif;
+                font-size: clamp(10px, .8svw, 12px);
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                color: #9d9ea2;
+            }
+            .c-jtbd-priority.hot { color: #181a1f; }
+            .c-jtbd-action {
+                font-family: Roboto, sans-serif;
+                font-size: clamp(15px, 1.2svw, 20px);
+                color: #181a1f;
+                font-weight: 500;
+                line-height: 1.25;
+            }
+            .c-jtbd-job {
+                font-family: Roboto, sans-serif;
+                font-size: clamp(12px, 1svw, 16px);
+                color: #9d9ea2;
+                line-height: 145%;
+            }
+
+            @media (max-width: 991px) {
+                .c-jtbd { grid-template-columns: 1fr 1fr; }
+            }
             @media (max-width: 767px) {
                 .c-hero-caption { flex-direction: column; align-items: flex-start; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; }
+                .c-hero-right { align-items: flex-start; }
+                .c-jtbd { grid-template-columns: 1fr 1fr; }
                 .c-inner { padding: 3rem 1.25rem; }
                 .c-meta-inner { padding: 1.25rem; gap: 1.5rem; }
                 .c-intro { flex-direction: column; gap: 2rem; }
@@ -338,7 +405,23 @@
             <div class="c-hero-overlay"></div>
             <div class="c-hero-caption">
                 <h1 class="c-hero-title">Happ.su<br/>Landing redesign</h1>
-                <div class="c-hero-badge">2025 · Web · Тестовое</div>
+                <div class="c-hero-right">
+                    <div class="c-hero-badge">2025 · Web · Тестовое</div>
+                    <div style="display:flex; gap:.75rem; flex-wrap:wrap; justify-content:flex-end;">
+                        <a href="https://kirter17.github.io/happ-main/" target="_blank" class="c-btn hero-primary">
+                            Открыть лендинг
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://kirter17.github.io/happ-presentation/" target="_blank" class="c-btn hero-secondary">
+                            Подробный кейс
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -384,6 +467,40 @@
                         <div class="c-eyebrow">Вопросы до старта</div>
                         <p class="c-body">Happ — VPN или прокси? Какой CTA главный? Кто аудитория? Нужен ли RTL для Ирана?</p>
                         <p class="c-body muted">Без ответов на них нет дизайна — есть только визуал.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JTBD -->
+        <div class="c-wrap grey">
+            <div class="c-inner">
+                <div class="c-section-header">
+                    <span class="c-section-num">00</span>
+                    <h2 class="c-section-title">Почему люди приходят</h2>
+                </div>
+                <p class="c-body muted" style="max-width: 580px; margin-bottom: 2rem;">Четыре сценария — не равнозначны по срочности. Это определяет иерархию на лендинге.</p>
+
+                <div class="c-jtbd">
+                    <div class="c-jtbd-item hot">
+                        <div class="c-jtbd-priority hot">↑ Главный</div>
+                        <div class="c-jtbd-action">Download</div>
+                        <div class="c-jtbd-job">Хочет попробовать — нужно скачать приложение прямо сейчас</div>
+                    </div>
+                    <div class="c-jtbd-item hot">
+                        <div class="c-jtbd-priority hot">↑ Срочный</div>
+                        <div class="c-jtbd-action">Support</div>
+                        <div class="c-jtbd-job">Что-то перестало работать — нужна помощь прямо сейчас</div>
+                    </div>
+                    <div class="c-jtbd-item">
+                        <div class="c-jtbd-priority">— Вторичный</div>
+                        <div class="c-jtbd-action">Docs</div>
+                        <div class="c-jtbd-job">Хочет разобраться как устроен продукт изнутри</div>
+                    </div>
+                    <div class="c-jtbd-item">
+                        <div class="c-jtbd-priority">— Вторичный</div>
+                        <div class="c-jtbd-action">Donate</div>
+                        <div class="c-jtbd-job">Хочет поддержать проект финансово</div>
                     </div>
                 </div>
             </div>
