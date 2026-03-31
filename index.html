@@ -107,6 +107,30 @@
                     width: 100%; display: flex;
                     position: relative; overflow: hidden;
                 }
+                .projects-happ {
+                    aspect-ratio: 3 / 2;
+                    background-color: #e8edf5;
+                    justify-content: center; align-items: center;
+                    width: 100%; display: flex;
+                    position: relative; overflow: hidden;
+                }
+                .projects-happ img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    transition: transform .4s ease;
+                }
+                .project:hover .projects-happ img {
+                    transform: scale(1.03);
+                }
+                .projects-new {
+                    aspect-ratio: 3 / 2;
+                    background-color: #f0f0f0;
+                    justify-content: center; align-items: center;
+                    width: 100%; display: flex;
+                    position: relative; overflow: hidden;
+                }
                 .project-placeholder-text {
                     font-size: clamp(40px, 8svw, 120px);
                     font-weight: 900;
@@ -363,6 +387,63 @@
                                 <div class="bubble">Кейс в процессе</div>
                             </div>
                             <div class="project-placeholder-text">M3</div>
+                        </div>
+                    </div>
+
+                    <a href="happ.html" class="project w-inline-block">
+                        <div class="titletype">
+                            <h3 class="h3">Happ.su</h3>
+                            <div class="text m-size">Web · Landing</div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="description">
+                            <div class="year-role">
+                                <div class="years">
+                                    <div class="text gray">Год</div>
+                                    <div class="text">2025</div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="text gray">Роль</div>
+                                    <div class="text">Product Designer</div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="text gray">Scope</div>
+                                <div class="text">Research, UX/UI, HTML/CSS</div>
+                            </div>
+                        </div>
+                        <div class="projects-happ">
+                            <img src="happ-v5.png" alt="Happ — лендинг"/>
+                        </div>
+                    </a>
+
+                    <div class="project">
+                        <div class="titletype">
+                            <h3 class="h3">Новый проект</h3>
+                            <div class="text m-size">Mobile · Web</div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="description">
+                            <div class="year-role">
+                                <div class="years">
+                                    <div class="text gray">Год</div>
+                                    <div class="text">2025</div>
+                                </div>
+                                <div class="project-info">
+                                    <div class="text gray">Роль</div>
+                                    <div class="text">Product Designer</div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="text gray">Scope</div>
+                                <div class="text">UX/UI, Research</div>
+                            </div>
+                        </div>
+                        <div class="projects-new">
+                            <div class="bubble-container">
+                                <div class="bubble">Кейс в процессе</div>
+                            </div>
+                            <div class="project-placeholder-text">NP</div>
                         </div>
                     </div>
 
