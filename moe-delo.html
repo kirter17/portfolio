@@ -239,6 +239,57 @@
             grid-column: 1/13;
         }
 
+        /* ─── SPACING (matches Tracio) ─── */
+        .case-container {
+            gap: clamp(32px, 6svw, 96px);
+        }
+
+        /* ─── SITE LINK BUTTON ─── */
+        .site-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            padding: .7rem 1.4rem;
+            border: 1.5px solid #1b1f3b3a;
+            border-radius: 99rem;
+            text-decoration: none;
+            font-family: Roboto, sans-serif;
+            font-size: clamp(13px, 1.1svw, 17px);
+            font-weight: 500;
+            color: #181a1f;
+            transition: background .18s, border-color .18s;
+            white-space: nowrap;
+        }
+        .site-link-btn:hover {
+            background: #f0f2f6;
+            border-color: #1b1f3b70;
+        }
+        .site-link-btn .arrow {
+            font-size: .85em;
+            opacity: .5;
+        }
+
+        /* ─── RESULTS (bigger, more impact) ─── */
+        .result-num {
+            font-family: Roboto, sans-serif;
+            font-size: clamp(44px, 6svw, 96px);
+            font-weight: 300;
+            color: #181a1f;
+            letter-spacing: -.04em;
+            line-height: 1;
+        }
+        .result-text {
+            font-family: Roboto, sans-serif;
+            font-size: clamp(12px, .95svw, 15px);
+            color: #9d9ea2;
+            line-height: 140%;
+        }
+        .result-card {
+            background: #fff;
+            padding: 2rem 1.75rem 1.75rem;
+            display: flex; flex-direction: column; gap: .6rem;
+        }
+
         /* ─── RESPONSIVE ─── */
         @media screen and (max-width: 991px) {
             .case-main > .cm-title  { grid-column: 1/13; grid-row: 1; }
@@ -317,14 +368,15 @@
                 <div class="text gray" style="margin-bottom:.3rem;">Инструменты</div>
                 <div class="text">Figma, HIG, Material Design,<br/>Amplitude, A/B-тестирование</div>
             </div>
-            <div class="meta-item">
-                <div class="text gray" style="margin-bottom:.3rem;">Ссылка</div>
-                <a href="https://www.moedelo.org" target="_blank" class="text" style="text-decoration:none; border-bottom:1px solid #1b1f3b40;">moedelo.org</a>
+            <div class="meta-item" style="display:flex; align-items:center;">
+                <a href="https://www.moedelo.org" target="_blank" class="site-link-btn">
+                    moedelo.org <span class="arrow">↗</span>
+                </a>
             </div>
         </div>
 
         <!-- key metrics -->
-        <div class="case-block" style="margin-top:2rem;">
+        <div class="case-block">
             <div class="header-case">результат</div>
             <div class="metrics-strip cb-metrics" style="margin-top:0;">
                 <div class="metric-pill">
@@ -363,7 +415,7 @@
             </div>
         </div>
 
-        <div class="ph-wide" style="margin-top:2rem; grid-column:1/13;">
+        <div class="ph-wide" style="grid-column:1/13;">
             <div class="ph-wide-label">Скрин: главный экран или онбординг приложения</div>
         </div>
     </div>
@@ -377,7 +429,7 @@
             <div class="header-case">задача</div>
             <div class="text l-size cb-narrow">Снизить нагрузку на бизнес-ассистентов за счёт того, что пользователи начнут решать задачи самостоятельно через приложение.</div>
         </div>
-        <div class="case-block" style="margin-top:2rem;">
+        <div class="case-block">
             <div class="header-case"></div>
             <div class="div-block">
                 <div class="text m-size thin">Три вещи, которые нужно было решить:</div>
@@ -402,7 +454,7 @@
             </div>
         </div>
 
-        <div class="ph-wide" style="margin-top:2rem;">
+        <div class="ph-wide">
             <div class="ph-wide-label">Скрин: дизайн-система в Figma — компоненты, цвета, типографика</div>
         </div>
     </div>
@@ -426,7 +478,7 @@
             </div>
         </div>
 
-        <div class="case-block" style="margin-top:2rem;">
+        <div class="case-block">
             <div class="header-case"></div>
             <div class="ph-phones ab">
                 <div class="ph-variant">
@@ -460,7 +512,7 @@
             </div>
         </div>
 
-        <div class="case-block" style="margin-top:2rem;">
+        <div class="case-block">
             <div class="header-case"></div>
             <div class="div-block">
                 <div class="text m-size thin"><span style="color:#181a1f; font-weight:500;">80% пользователей</span> быстрее ориентировались в варианте A. Это решение ушло в финальный дизайн.</div>
@@ -515,7 +567,7 @@
             </div>
         </div>
 
-        <div class="case-block" style="margin-top:2rem;">
+        <div class="case-block">
             <div class="header-case"></div>
             <div class="side-wrap">
                 <div class="side-text">
@@ -559,7 +611,7 @@
             </div>
         </div>
 
-        <div class="ph-wide" style="margin-top:2rem;">
+        <div class="ph-wide">
             <div class="ph-wide-label">Скрин: отчёт ДДС — график и список операций</div>
         </div>
     </div>
@@ -576,7 +628,7 @@
             </div>
         </div>
 
-        <div class="case-block" style="margin-top:2rem;">
+        <div class="case-block">
             <div class="header-case"></div>
             <div class="ph-phones ab">
                 <div class="ph-variant">
@@ -607,7 +659,7 @@
             </div>
         </div>
 
-        <div class="case-block" style="margin-top:2rem;">
+        <div class="case-block">
             <div class="header-case"></div>
             <div class="div-block">
                 <div class="text m-size thin"><span style="color:#181a1f; font-weight:500;">Вариант B: +35% CTR.</span> Пользователи проводили в ключевых разделах на 20% больше времени. Конверсия восстановилась.</div>
@@ -659,7 +711,7 @@
                     <div class="result-text">ускорение передачи дизайна в разработку</div>
                 </div>
                 <div class="result-card" style="background:#f8f8f8;">
-                    <div class="result-num" style="font-size:clamp(20px,2svw,32px); font-weight:400;">3 мес</div>
+                    <div class="result-num">3 мес</div>
                     <div class="result-text">от старта до запуска MVP на двух платформах</div>
                 </div>
             </div>
